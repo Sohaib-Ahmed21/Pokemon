@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Pomekom Deck</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/battlefield.css') }}">
+</head>
+<body>
+{#{% extends'base.html' %}#}
+{#{% block style %}#}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/battlefield.css') }}">
+{#{% endblock %}#}
+{#{% block content %}#}
+<div class="deck">
+	{% for card in cards %}
+		<div class="card">
+			<img src="{{ card.images.small }}" alt="{{ card.name }}">
+			<p>{{ card.name }}</p>
+		</div>
+	{% endfor %}
+</div>
+
+<div class="actions">
+	<button onclick="endGame('run')">Run Away</button>
+	<button onclick="endGame('fight')">Fight</button>
+	<button onclick="endGame('catch')">Catch</button>
+</div>
+
+<script>
+	function endGame(action) {
+		if (action === 'run') {
+			alert('You chose to run away!');
+			// Here, you can also redirect the user or end the session.
+		}
+		// Implement the logic for 'fight' and 'catch' if desired.
+	}
+</script>
+{#{% endblock %}#}
+</body>
+</html>

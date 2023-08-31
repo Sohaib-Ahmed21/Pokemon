@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pokemon</title>
+</head>
+<body>
+
+<h1>Pokemon Card</h1>
+
+{% if img_url %}
+	<img src="{{ img_url }}" alt="Pokemon Image">
+{% else %}
+	<p>No image available.</p>
+{% endif %}
+
+</body>
+</html>

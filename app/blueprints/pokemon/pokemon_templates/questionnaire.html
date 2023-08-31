@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Questionnaire</title>
+</head>
+<body>
+<form method="post">
+	{{ form.hidden_tag() }}
+
+	<p>{{ form.user_idel.label }}<br>{{ form.user_idel() }}</p>
+	<p>{{ form.team.label }}<br>{{ form.team() }}</p>
+	<p>{{ form.pokemon.label }}<br>{{ form.pokemon() }}</p>
+
+	<button type="submit">Submit</button>
+</form>
+</body>
+</html>
+
+
+{#<!-- questionnaire.html -->#}
+{#<!DOCTYPE html>#}
+{#<html>#}
+{#<head>#}
+{#	<title>Initial Data Questionnaire</title>#}
+{#</head>#}
+{#<body>#}
+{#<h1>Initial Data Questionnaire</h1>#}
+{##}
+{#<form method="POST" action="{{ url_for('pokemon.questionnaire') }}">#}
+{#	<input type="hidden" name="current_question" value="{{ current_question }}">#}
+{##}
+{#	{% if current_question < questions|length %}#}
+{#		<label for="{{ question_field_name }}">{{ questions[current_question] }}</label><br>#}
+{#		<input type="text" name="{{ question_field_name }}"><br>#}
+{#	{% endif %}#}
+{##}
+{#	{% if current_question == questions|length %}#}
+{#		<label for="user_idel">Username</label><br>#}
+{#		<input type="text" name="user_idel"><br>#}
+{##}
+{#		<label for="team">Select a team</label><br>#}
+{#		<select name="team">#}
+{#			<option value="team1">Team 1</option>#}
+{#			<option value="team2">Team 2</option>#}
+{#			<option value="team3">Team 3</option>#}
+{#		</select><br>#}
+{##}
+{#		<label for="pokemon">Select an initial Pokemon</label><br>#}
+{#		<select name="pokemon">#}
+{#			<option value="pokemon1">Pokemon 1</option>#}
+{#			<option value="pokemon2">Pokemon 2</option>#}
+{#			<option value="pokemon3">Pokemon 3</option>#}
+{#		</select><br>#}
+{#	{% endif %}#}
+{##}
+{#	<input type="submit" value="Next">#}
+{#</form>#}
+{#</body>#}
+{#</html>#}
+{##}
+{##}
+{#<!DOCTYPE html>#}
+{#<html lang="">#}
+{#<head>#}
+{#	<title>Questionnaire</title>#}
+{#</head>#}
+{#<body>#}
+{#<h1>Questionnaire</h1>#}
+{#<form method="POST">#}
+{#	<input type="hidden" name="current_question" value="{{ current_question }}">#}
+{#	<label>{{ questions[current_question] }}:</label>#}
+{#	{% if current_question == 0 %}#}
+{#		{{ form.user_idel.label }} <input type="text" value="{{ form.user_idel.data }}">#}
+{#	{% elif current_question == 1 %}#}
+{#		{{ form.team.label }} <input type="text" name="Team" value="{{ form.team.data }}">#}
+{#	{% elif current_question == 2 %}#}
+{#		{{ form.pokemon.label }} <textarea name="question_2">{{ form.pokemon.data }}</textarea>#}
+{#	{% endif %}#}
+{##}
+{#</form>#}
+{##}
+{##}
+{#<script>#}
+{#	document.addEventListener("keydown", function (event) {#}
+{#		if (event.key === "Enter") {#}
+{#			event.preventDefault();#}
+{#			document.querySelector("form").submit();#}
+{#		}#}
+{#	});#}
+{#</script>#}
+{#</body>#}
+{#</html>#}
