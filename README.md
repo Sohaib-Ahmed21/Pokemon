@@ -1,5 +1,5 @@
 ### POKEMON API
-This is a pokemon cards game in which two different players can make a team and choose their cards and play this game turn by turn.
+This is a pokemon cards game in which two players make their teams i.e. choose their cards and play this game turn by turn. One who loses all cards first loses the game.
 
 This Project contain:
 
