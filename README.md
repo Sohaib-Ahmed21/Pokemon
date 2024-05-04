@@ -1,11 +1,13 @@
 ### POKEMON API
+This is a pokemon cards game in which two different players can make a team and choose their cards and play this game turn by turn.
 
 This Project contain:
 
 - api connection
-- database (unfinished)
+- database
 - web interaction
 - signup/login
+
 
 as far I keep working will maintain this up to date
 
